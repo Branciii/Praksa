@@ -47,6 +47,23 @@ namespace PraksaWebApi.Controllers
 
         }
 
+        /*
+        [HttpPut]
+        [Route("api/update")]
+        */
+
+        [HttpDelete]
+        [Route("api/delete")]
+        public HttpResponseMessage DeleteAllStudents()
+        {
+            if (StudentList.Count() == 0)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+            StudentList.Clear();
+            return Request.CreateResponse(HttpStatusCode.OK, StudentList);
+        }
+
 
     }
 }
