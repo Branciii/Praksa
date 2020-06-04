@@ -1,0 +1,11 @@
+C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\Project.Example.dll
+C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\Project.Example.pdb
+C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Service.csprojAssemblyReference.cache
+C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Service.csproj.CoreCompileInputs.cache
+C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Example.dll
+C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Example.pdb
+C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\ProjectRepository.dll
+C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\ProjectRepository.pdb
+C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Service.csproj.CopyComplete
+C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\ProjectModel.dll
+C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\ProjectModel.pdb
