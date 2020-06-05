@@ -1,9 +1,0 @@
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\bin\Debug\ProjectRepository.dll
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\bin\Debug\ProjectRepository.pdb
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\obj\Debug\Project.Repository.csproj.CoreCompileInputs.cache
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\obj\Debug\ProjectRepository.dll
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\obj\Debug\ProjectRepository.pdb
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\bin\Debug\ProjectModel.dll
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\bin\Debug\ProjectModel.pdb
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\obj\Debug\Project.Repository.csprojAssemblyReference.cache
-C:\Users\Branka\source\repos\Praksa\ProjectRepository\obj\Debug\Project.Repository.csproj.CopyComplete

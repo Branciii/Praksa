@@ -1,6 +1,0 @@
-C:\Users\Branka\source\repos\Praksa\ProjectModel\bin\Debug\ProjectModel.dll
-C:\Users\Branka\source\repos\Praksa\ProjectModel\bin\Debug\ProjectModel.pdb
-C:\Users\Branka\source\repos\Praksa\ProjectModel\obj\Debug\Project.Model.csprojAssemblyReference.cache
-C:\Users\Branka\source\repos\Praksa\ProjectModel\obj\Debug\Project.Model.csproj.CoreCompileInputs.cache
-C:\Users\Branka\source\repos\Praksa\ProjectModel\obj\Debug\ProjectModel.dll
-C:\Users\Branka\source\repos\Praksa\ProjectModel\obj\Debug\ProjectModel.pdb

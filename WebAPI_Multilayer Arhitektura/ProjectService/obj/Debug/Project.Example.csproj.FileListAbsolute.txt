@@ -1,6 +1,0 @@
-C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\Project.Example.dll
-C:\Users\Branka\source\repos\Praksa\Project.Example\bin\Debug\Project.Example.pdb
-C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Example.csprojAssemblyReference.cache
-C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Example.csproj.CoreCompileInputs.cache
-C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Example.dll
-C:\Users\Branka\source\repos\Praksa\Project.Example\obj\Debug\Project.Example.pdb
