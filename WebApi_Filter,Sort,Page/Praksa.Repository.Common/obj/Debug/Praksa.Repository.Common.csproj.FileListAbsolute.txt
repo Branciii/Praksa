@@ -1,0 +1,13 @@
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Praksa.Repository.Common.dll
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Praksa.Repository.Common.pdb
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Praksa.Model.dll
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Project.Model.Common.dll
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Praksa.Model.pdb
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Project.Model.Common.pdb
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\obj\Debug\Praksa.Repository.Common.csprojAssemblyReference.cache
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\obj\Debug\Praksa.Repository.Common.csproj.CoreCompileInputs.cache
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\obj\Debug\Praksa.Repository.Common.csproj.CopyComplete
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\obj\Debug\Praksa.Repository.Common.dll
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\obj\Debug\Praksa.Repository.Common.pdb
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Praksa.Common.dll
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository.Common\bin\Debug\Praksa.Common.pdb

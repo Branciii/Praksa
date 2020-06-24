@@ -1,0 +1,6 @@
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Common\bin\Debug\Praksa.Common.dll
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Common\bin\Debug\Praksa.Common.pdb
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Common\obj\Debug\Praksa.Common.csprojAssemblyReference.cache
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Common\obj\Debug\Praksa.Common.csproj.CoreCompileInputs.cache
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Common\obj\Debug\Praksa.Common.dll
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Common\obj\Debug\Praksa.Common.pdb
