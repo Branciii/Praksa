@@ -1,0 +1,16 @@
+#SearchStudentsButton{
+    margin-bottom: 5px;
+    background: rgb(255, 252, 92);
+    color: black;
+    text-align: center;
+    border-radius : 10px;
+}
+
+#SearchStudentsButton:hover {
+    background : white;
+    cursor:pointer;
+}
+
+#InputSearchStudents{
+    margin-top:10px;
+}
