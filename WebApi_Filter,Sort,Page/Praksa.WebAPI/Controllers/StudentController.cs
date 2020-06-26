@@ -31,7 +31,21 @@ namespace Praksa.WebAPI.Controllers
         protected IStudentService studentService { get; private set; }
         protected IMapper mapper { get; private set; }
 
+        [HttpGet]
+        [Route("api/readstudents")]
+        public async Task<HttpResponseMessage> GetStudentsAsync([FromUri] StudentPage page)
+        {
+            StudentList = await studentService.ReadDataByIdAsync(page);
 
+            if (StudentList.Count() == 0)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+            Students = mapper.Map<List<Student>>(StudentList);
+            return Request.CreateResponse(HttpStatusCode.OK, Students);
+        }
+
+        /*
         [HttpGet]
         [Route("api/readstudents")]
         public async Task<HttpResponseMessage> GetStudentsAsync([FromBody] StudentFilter filter)
@@ -44,7 +58,7 @@ namespace Praksa.WebAPI.Controllers
             }
             Students = mapper.Map<List<Student>>(StudentList);
             return Request.CreateResponse(HttpStatusCode.OK, Students);
-        }
+        }*/
 
         /*
         [HttpGet]
@@ -57,7 +71,7 @@ namespace Praksa.WebAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
             return Request.CreateResponse(HttpStatusCode.Found, StudentList);
-        }
+        }*/
 
 
         [HttpPost]
@@ -102,6 +116,6 @@ namespace Praksa.WebAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
             return Request.CreateResponse(HttpStatusCode.OK);
-        }*/
+        }
     }
 }

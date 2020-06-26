@@ -65,12 +65,25 @@ namespace ProjectRepository
             return StudentList;
         }
 
-        public async Task<List<StudentModel>> ReadStudentByIdAsync(Guid StudentId)
+        public async Task<List<StudentModel>> ReadStudentByIdAsync(StudentPage page)
         {
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;Initial Catalog = PraksaSQL; Integrated Security = True";
 
+            int begginingRow = (page.PageNumber - 1) * page.PageSize;
+            int endRow = begginingRow + page.PageSize + 1;
+
             string queryString =
-                "SELECT id,ime,prezime FROM STUDENT WHERE (id = '" + StudentId + "');";
+                "DECLARE @BegginingRow INT = " + begginingRow + ";" +
+                "DECLARE @EndRow INT = " + endRow + ";"; 
+
+            queryString +=
+                "SELECT id,ime,prezime FROM (" +
+                    "SELECT ROW_NUMBER() OVER(ORDER BY id) AS RowNum, id, ime, prezime " +
+                    "FROM STUDENT" +
+                ") AS tbl " +
+                "WHERE @BegginingRow < RowNum AND @EndRow > RowNum";
+
+
             using (SqlConnection connection =
                        new SqlConnection(connectionString))
             {

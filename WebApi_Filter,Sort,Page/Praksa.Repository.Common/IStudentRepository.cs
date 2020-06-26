@@ -12,7 +12,7 @@ namespace Praksa.Repository.Common
     {
         Task<List<StudentModel>> ReadStudentsAsync(StudentFilter filter);
 
-        Task<List<StudentModel>> ReadStudentByIdAsync(Guid StudentId);
+        Task<List<StudentModel>> ReadStudentByIdAsync(StudentPage page);
 
         Task AddNewStudentAsync(StudentModel student);
 

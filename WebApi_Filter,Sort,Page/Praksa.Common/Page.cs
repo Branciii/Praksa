@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace Praksa.Common
 {
-    class Page
+    public class StudentPage
     {
-    }
+		const int maxPageSize = 2;
+		public int PageNumber { get; set; } = 1;
+
+		private int _pageSize = 10;
+		public int PageSize
+		{
+			get
+			{
+				return _pageSize;
+			}
+			set
+			{
+				_pageSize = (value > maxPageSize) ? maxPageSize : value;
+			}
+		}
+	}
 }

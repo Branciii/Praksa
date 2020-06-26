@@ -12,7 +12,7 @@ namespace Praksa.Service.Common
     {
         Task<List<StudentModel>> ReadDataAsync(StudentFilter filter);
 
-        Task<List<StudentModel>> ReadDataByIdAsync(Guid StudentId);
+        Task<List<StudentModel>> ReadDataByIdAsync(StudentPage page);
 
         Task AddNewDataAsync(StudentModel student);
 

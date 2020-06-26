@@ -28,9 +28,9 @@ namespace ProjectService
             return StudentList;
         }
 
-        public async Task<List<StudentModel>> ReadDataByIdAsync(Guid StudentId)
+        public async Task<List<StudentModel>> ReadDataByIdAsync(StudentPage page)
         {
-            StudentList = await studentRepository.ReadStudentByIdAsync(StudentId);
+            StudentList = await studentRepository.ReadStudentByIdAsync(page);
             return StudentList;
         }
 

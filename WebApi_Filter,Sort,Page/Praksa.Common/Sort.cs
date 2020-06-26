@@ -8,6 +8,11 @@ namespace Praksa.Common
 {
     class Sort
     {
-        public string OrderBy { get; set; }
+        public string OrderBy { get; set; } //name / surname
+        public string Order { get; set; } // ascending / descending
+        public Sort()
+        {
+            OrderBy = "surname";
+        }
     }
 }
