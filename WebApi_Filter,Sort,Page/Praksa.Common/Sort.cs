@@ -6,13 +6,36 @@ using System.Threading.Tasks;
 
 namespace Praksa.Common
 {
-    class Sort
+    public class StudentSort : ISort
     {
-        public string OrderBy { get; set; } //name / surname
-        public string Order { get; set; } // ascending / descending
-        public Sort()
-        {
-            OrderBy = "surname";
-        }
-    }
+        public string _OrderBy { get; set; } = "prezime";
+        public string _Order { get; set; } = "asc";
+
+		public string Order
+		{
+			get
+			{
+				return _Order;
+			}
+			set
+			{
+				_Order = ((value !="asc")&&(value!="desc")) ? "asc" : value;
+			}
+		}
+
+		public string OrderBy
+		{
+			get
+			{
+				return _OrderBy;
+			}
+			set
+			{
+				_OrderBy = ((value != "ime") && (value != "prezime")) ? "prezime" : value;
+			}
+		}
+
+
+
+	}
 }

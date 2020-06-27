@@ -28,3 +28,4 @@ C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository\bin\Debug\System.Thread
 C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository\bin\Debug\System.Web.Http.xml
 C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository\bin\Debug\Praksa.Common.dll
 C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository\bin\Debug\Praksa.Common.pdb
+C:\Users\Branka\source\repos\PraksaWEB\Praksa.Repository\bin\Debug\System.Linq.Dynamic.dll

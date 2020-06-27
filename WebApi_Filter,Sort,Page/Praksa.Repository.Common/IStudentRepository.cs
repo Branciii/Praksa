@@ -10,9 +10,8 @@ namespace Praksa.Repository.Common
 {
     public interface IStudentRepository
     {
-        Task<List<StudentModel>> ReadStudentsAsync(StudentFilter filter);
 
-        Task<List<StudentModel>> ReadStudentByIdAsync(StudentPage page);
+        Task<List<StudentModel>> ReadStudentAsync(StudentFilter filter, StudentSort sort, StudentPage page);
 
         Task AddNewStudentAsync(StudentModel student);
 

@@ -33,15 +33,19 @@ namespace Praksa.WebAPI.Controllers
 
         [HttpGet]
         [Route("api/readstudents")]
-        public async Task<HttpResponseMessage> GetStudentsAsync([FromUri] StudentPage page)
+        public async Task<HttpResponseMessage> GetStudentsAsync([FromUri] StudentFilter filter, [FromUri] StudentSort sort, [FromUri] StudentPage page)
         {
-            StudentList = await studentService.ReadDataByIdAsync(page);
-
+            if (filter!=null && !filter.EmptyFilterString())
+            {
+                filter.StringToNameAndSurname();
+            }
+            StudentList = await studentService.ReadDataAsync(filter,sort,page);
             if (StudentList.Count() == 0)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
             Students = mapper.Map<List<Student>>(StudentList);
+
             return Request.CreateResponse(HttpStatusCode.OK, Students);
         }
 

@@ -22,15 +22,9 @@ namespace ProjectService
             this.studentRepository = studentRepository;
         }
 
-        public async Task<List<StudentModel>> ReadDataAsync(StudentFilter filter)
+        public async Task<List<StudentModel>> ReadDataAsync(StudentFilter filter, StudentSort sort, StudentPage page)
         {
-            StudentList = await studentRepository.ReadStudentsAsync(filter);
-            return StudentList;
-        }
-
-        public async Task<List<StudentModel>> ReadDataByIdAsync(StudentPage page)
-        {
-            StudentList = await studentRepository.ReadStudentByIdAsync(page);
+            StudentList = await studentRepository.ReadStudentAsync(filter, sort, page);
             return StudentList;
         }
 

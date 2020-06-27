@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Praksa.Common
 {
-    public class StudentPage
+    public class StudentPage : IPage
     {
-		const int maxPageSize = 2;
+		const int maxPageSize = 10;
 		public int PageNumber { get; set; } = 1;
 
 		private int _pageSize = 10;

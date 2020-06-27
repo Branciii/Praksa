@@ -7,17 +7,23 @@ using System.Web.UI.WebControls;
 
 namespace Praksa.Common
 {
-    public class StudentFilter : QueryStringParameter
+    public class StudentFilter : IFilter
     {
-        public string StudentName { get; set; }
-        public string StudentSurname { get; set; }
-        public bool StudentHasName()
+        public string FilterString { get; set; } = "";
+
+        public List<String> StudentNames = new List<String>();
+
+        public void StringToNameAndSurname()
         {
-            return ((StudentName != "") && (StudentName != null));
+            StudentNames = FilterString.Split(new Char[] { '-', ' '}).ToList();
+            StudentNames = StudentNames.Union(FilterString.Split(' ').ToList()).ToList();
         }
-        public bool StudentHasSurname()
+
+        //ako nam nisu dani nikakvi parametri po kojima ćemo tražiti
+        //ova funkcija vraća False i ćemo tada vraćati sve studente
+        public bool EmptyFilterString()
         {
-            return ((StudentSurname != "") && (StudentSurname != null));
+            return (FilterString == "");
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
@@ -16,73 +17,49 @@ namespace ProjectRepository
     public class StudentRepository : IStudentRepository
     {
         public List<StudentModel> StudentList = new List<StudentModel>();
-
-        public async Task<List<StudentModel>> ReadStudentsAsync(StudentFilter filter)
+        
+        public async Task<List<StudentModel>> ReadStudentAsync(StudentFilter filter, StudentSort sort, StudentPage page)
         {
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;Initial Catalog = PraksaSQL; Integrated Security = True";
 
-            string queryString =
-                "SELECT id,ime,prezime FROM STUDENT ";
+            int begginingRow = 1;
+            int endRow = 11;
 
-            if (filter.StudentHasName()||filter.StudentHasSurname())
+            if (page != null)
             {
-                queryString += "WHERE ";
-
-                if (filter.StudentHasName())
-                {
-                    queryString += "(ime = '" + filter.StudentName + "')";
-
-                    if (filter.StudentHasSurname())
-                    {
-                        queryString += " AND (prezime = '" + filter.StudentSurname + "')";
-                    }
-                }
-                else
-                {
-                    queryString += "(prezime = '" + filter.StudentSurname + "')";
-                }
+                begginingRow = (page.PageNumber - 1) * page.PageSize;
+                endRow = begginingRow + page.PageSize + 1;
             }
-            queryString += ";";
-
-            using (SqlConnection connection =
-                       new SqlConnection(connectionString))
-            {
-                SqlCommand command =
-                    new SqlCommand(queryString, connection);
-                connection.Open();
-
-                SqlDataReader reader = await Task.Run(()=>command.ExecuteReader());
-                
-                // Call Read before accessing data.
-                while (reader.Read())
-                {
-                    StudentList.Add(new StudentModel { id = reader.GetGuid(0), name = reader.GetString(1), surname = reader.GetString(2) });
-                }
-
-                // Call Close when done reading.
-                reader.Close();
-            }
-            return StudentList;
-        }
-
-        public async Task<List<StudentModel>> ReadStudentByIdAsync(StudentPage page)
-        {
-            string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;Initial Catalog = PraksaSQL; Integrated Security = True";
-
-            int begginingRow = (page.PageNumber - 1) * page.PageSize;
-            int endRow = begginingRow + page.PageSize + 1;
 
             string queryString =
                 "DECLARE @BegginingRow INT = " + begginingRow + ";" +
-                "DECLARE @EndRow INT = " + endRow + ";"; 
+                "DECLARE @EndRow INT = " + endRow + ";";
 
             queryString +=
                 "SELECT id,ime,prezime FROM (" +
                     "SELECT ROW_NUMBER() OVER(ORDER BY id) AS RowNum, id, ime, prezime " +
                     "FROM STUDENT" +
                 ") AS tbl " +
-                "WHERE @BegginingRow < RowNum AND @EndRow > RowNum";
+                "WHERE @BegginingRow < RowNum AND @EndRow > RowNum ";
 
+
+            if (filter!=null)
+            {
+                if (!filter.EmptyFilterString())
+                {
+                    string FilterString = "'" + String.Join("','", filter.StudentNames) + "'";
+                    queryString += "AND (ime IN (" + FilterString + ") OR (prezime IN (" + FilterString + ")))";
+                }
+            }
+
+            if(sort != null)
+            {
+                queryString += " ORDER BY " + sort.OrderBy + " " + sort.Order;
+            }
+            else
+            {
+                queryString += " ORDER BY prezime asc";
+            }
 
             using (SqlConnection connection =
                        new SqlConnection(connectionString))
