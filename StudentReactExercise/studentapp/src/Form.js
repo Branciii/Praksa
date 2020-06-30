@@ -1,5 +1,7 @@
 import React from 'react';
 import './Form.css';
+import Button from './Button';
+import FormInput from './FormInput';
 
 export default class Form extends React.Component {
     state = {
@@ -27,26 +29,27 @@ export default class Form extends React.Component {
             <form>
                 <br /> 
 
-                <input
+                <FormInput
+                    type = "text" 
                     name = "firstName"
                     placeholder = "First name "
                     value = {this.state.firstName} 
                     onChange = {e=>this.change(e)}
-                />
+                ></FormInput>
 
                 <br /> 
 
-                <input
+                <FormInput
+                    type = "password"
                     name = "lastName"
                     placeholder = "Last name "
                     value = {this.state.lastName} 
                     onChange = {e=>this.change(e)}
-                />
+                ></FormInput>
 
                 <br /> 
 
-                <button onClick = {e=> this.onSubmit(e)}>Submit</button>
-
+                <Button id = 'formButton' buttonMessage='Submit' onClick = {e=> this.onSubmit(e)}></Button>
             </form>
         ); 
     }
