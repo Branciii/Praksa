@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Praksa.Common
 {
-    public class StudentFilter : IFilter
+    public class StudentFilter : IStudentFilter
     {
         public string FilterString { get; set; } = "";
 

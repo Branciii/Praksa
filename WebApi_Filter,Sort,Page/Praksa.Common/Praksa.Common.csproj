@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Filter.cs" />
-    <Compile Include="IFilter.cs" />
+    <Compile Include="StudentFilter.cs" />
+    <Compile Include="IStudentFilter.cs" />
     <Compile Include="IPage.cs" />
     <Compile Include="ISort.cs" />
     <Compile Include="Page.cs" />

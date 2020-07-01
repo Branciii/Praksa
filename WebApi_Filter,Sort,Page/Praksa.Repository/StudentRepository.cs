@@ -66,12 +66,12 @@ namespace ProjectRepository
             {
                 SqlCommand command =
                     new SqlCommand(queryString, connection);
-                connection.Open();
+                await connection.OpenAsync();
 
-                SqlDataReader reader = await Task.Run(() => command.ExecuteReader());
+                SqlDataReader reader = await command.ExecuteReaderAsync();
 
                 // Call Read before accessing data.
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     StudentList.Add(new StudentModel { id = reader.GetGuid(0), name = reader.GetString(1), surname = reader.GetString(2) });
                 }
@@ -93,9 +93,9 @@ namespace ProjectRepository
             {
                 SqlCommand command =
                     new SqlCommand(queryString, connection);
-                connection.Open();
+                await connection.OpenAsync();
 
-                SqlDataReader reader = await Task.Run(() => command.ExecuteReader());
+                SqlDataReader reader = await command.ExecuteReaderAsync();
 
             }
         }
@@ -112,9 +112,9 @@ namespace ProjectRepository
             {
                 SqlCommand command =
                     new SqlCommand(checkIdExistence, connection);
-                connection.Open();
+                await connection.OpenAsync();
 
-                int userCount = await Task.Run(()=>(int)command.ExecuteScalar());
+                int userCount = (int)await command.ExecuteScalarAsync();
                 if (userCount == 0)
                 {
                     return false;
@@ -126,7 +126,7 @@ namespace ProjectRepository
                 command =
                     new SqlCommand(queryString, connection);
 
-                SqlDataReader reader = await Task.Run(() => command.ExecuteReader());
+                SqlDataReader reader = await command.ExecuteReaderAsync();
 
                 reader.Close();
             }
@@ -146,9 +146,9 @@ namespace ProjectRepository
             {
                 SqlCommand command =
                     new SqlCommand(checkIdExistence, connection);
-                connection.Open();
+                await connection.OpenAsync();
 
-                int userCount = (int)command.ExecuteScalar();
+                int userCount = (int)await command.ExecuteScalarAsync();
                 if (userCount == 0)
                 {
                     return false;
@@ -158,7 +158,7 @@ namespace ProjectRepository
                 "DELETE FROM KOLEGIJ_STUDENT WHERE student_id = '" + StudentId + "'; " +
                 "DELETE FROM STUDENT WHERE id = '" + StudentId + "';";
 
-                SqlDataReader reader = await Task.Run(() => command.ExecuteReader());
+                SqlDataReader reader = await command.ExecuteReaderAsync();
                 return true;
             }
         }

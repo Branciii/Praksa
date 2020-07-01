@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Praksa.Common
 {
-    public interface IFilter
+    public interface IStudentFilter
     {
         string FilterString { get; set; }
         void StringToNameAndSurname();
