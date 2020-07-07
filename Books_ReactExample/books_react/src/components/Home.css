@@ -1,0 +1,27 @@
+h3{
+  text-align: center;
+}
+
+#author{
+  text-align :right;
+}
+
+#popular_books_title{
+  background-color: rgb(109, 227, 243);
+}
+
+#new_books_title{
+  background-color: rgb(109, 243, 169);
+}
+
+#col_popular_books, #col_new_books{
+  border-radius: 10px;
+}
+
+#col_popular_books{
+  border : 2px solid rgb(109, 227, 243);
+}
+
+#col_new_books{
+  border : 2px solid rgb(109, 243, 169);
+}
