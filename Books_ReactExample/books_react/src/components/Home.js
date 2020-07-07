@@ -54,6 +54,13 @@ export default class Home extends React.Component {
                                 <h5 id = "author"><i>J. R. R. Tolkien</i></h5>
                             </div>
                         </div>
+
+                        <div class = "row pt-1">
+                            <div class = "col-4 offset-4">
+                                <button id = "see_more_popular_books">See more</button>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class = "col-5 offset-2" id = "col_new_books">
@@ -92,6 +99,13 @@ export default class Home extends React.Component {
                                 <h5 id = "author"><i>Monty Don</i></h5>
                             </div>
                         </div>
+
+                        <div class = "row pt-1">
+                            <div class = "col-4 offset-4">
+                                <button id = "see_more_new_books">See more</button>
+                            </div>
+                        </div>
+
                     </div>
                 
                 </div>
