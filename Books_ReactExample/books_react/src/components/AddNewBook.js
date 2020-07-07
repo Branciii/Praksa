@@ -26,7 +26,7 @@ export default class AddNewBook extends React.Component {
 
     render() {
         return(
-            <div>
+            <div id = "formdiv">
                 <form>
 
                     <br /> 

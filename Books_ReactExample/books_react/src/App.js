@@ -19,6 +19,7 @@ function App() {
           <Route path="/home" component={Home} />
           <Route path="/popular_books" component={PopularBooks} />
           <Route path="/add_new_book" component={AddNewBook} />
+          <Route path='*' exact={true} component={Home} />
         </Switch>
 
       </Router>
