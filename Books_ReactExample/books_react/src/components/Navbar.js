@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar,Nav,Button } from 'react-bootstrap';
+import { Navbar,Nav,Button,NavDropdown } from 'react-bootstrap';
 import './Navbar.css';
 import NavbarButton from './NavbarButton';
 
@@ -18,6 +18,7 @@ export default class NavBar extends React.Component{
                                 <Nav className="mr-auto">
                                     <div class = "row">
                                         <div class = "col-md-12">
+                                
                                             <ul id = "navbar-lett" class="navbar-nav ml-auto align-middle">
 
                                                 <li class="nav-item">
@@ -30,6 +31,14 @@ export default class NavBar extends React.Component{
 
                                                 <li class="nav-item">
                                                     <Nav.Link href="/periods"><NavbarButton buttonMessage = "See Periods"></NavbarButton></Nav.Link>
+                                                </li>
+
+                                                <li class = "nav-item pt-3">
+                                                    <NavDropdown title="Add New" id="basic-nav-dropdown">
+                                                        <NavDropdown.Item href="/add_new_book">
+                                                            Book
+                                                        </NavDropdown.Item>
+                                                    </NavDropdown>
                                                 </li>
 
                                             </ul>

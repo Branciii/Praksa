@@ -5,6 +5,7 @@ import './App.css';
 import Navbar from '././components/Navbar';
 import PopularBooks from '././components/PopularBooks';
 import Home from '././components/Home';
+import AddNewBook from './components/AddNewBook';
 
 
 function App() {
@@ -15,9 +16,9 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path="/" component={Home} />
           <Route path="/home" component={Home} />
           <Route path="/popular_books" component={PopularBooks} />
+          <Route path="/add_new_book" component={AddNewBook} />
         </Switch>
 
       </Router>

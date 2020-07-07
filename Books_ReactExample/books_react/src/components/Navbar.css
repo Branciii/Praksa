@@ -13,6 +13,7 @@
 
 #InputSearchBooks{
     margin-top:10px;
+    width : 250px;
 }
 
 li{
@@ -21,4 +22,8 @@ li{
 
 #homeButton{
     padding-left :50px;
+}
+
+#book{
+    color : black;
 }

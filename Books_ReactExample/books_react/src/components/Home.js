@@ -4,7 +4,7 @@ import './Home.css';
 export default class Home extends React.Component {
     render(){
         return (
-            <div class = "container">
+            <div class = "container pt-4">
                 <div class = "row">
                     <div class = "col-5 rounded" id = "popular_books_title">
                         <h3>Popular Books</h3>
